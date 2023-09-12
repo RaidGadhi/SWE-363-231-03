@@ -1,0 +1,109 @@
+<!-- IMPORTANT: this document was mistakenly submited for the first set of problems (HTML1). This document is for (exercise 2 HTML2) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Swimming website</title>
+    <!-- Header used for better semantic structure -->
+    <header>
+        <h1>Donation Section</h1>
+    </header>
+</head>
+<hr>
+<meta name="description" content="Raise the awareness to learn swimming.">
+<meta name="keywords" content="Swimming, save lives">
+<meta name="author" content="Raid Gadhi">
+
+<body>
+    <!-- article is used -->
+    <article>
+        <h2>Thank you for showing intreset to donate to us!</h2>
+        <p>Your contribution will save thousands of lives!</p>
+        <h2>Where will the donation money go?</h2>
+        <p>We spend every cent of the donations we get toward the issue of drowning. You can trust that your money will
+            be carefully used toward that goal.</p>
+    </article>
+    <form action="ThankYou.html">
+        <!-- main is used -->
+        <main>
+            <!-- fielset is used -->
+            <fieldset>
+                <!-- section is used -->
+                <section>
+                    <h3>How much would you like to donate?</h3>
+                    <label for="donation">Amount in $:</label>
+                    <input type="number" id="donation" name="donation" list="common_donations" autocomplete="on">
+                    <datalist id="common_donations">
+                        <option value="1">
+                        <option value="2">
+                        <option value="5">
+                        <option value="10">
+                    </datalist>
+                </section>
+                <!-- section is used -->
+                <section>
+                    <h3>How would you like to donate?</h3>
+                    <label for="Paypal">Paypal</label>
+                    <input type="radio" name="seprate" value="paypal">
+
+                    <label for="Visa">Visa</label>
+                    <input type="radio" name="seprate" value="visa">
+            </fieldset>
+            <!-- fieldset is used -->
+            <fieldset>
+                <h3>Provide your credit card information: </h3>
+                <label for="Card number">Card number:</label>
+                <input type="text" id="credit_card_number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                <label for="CVV">CVV:</label>
+                <input type="number" id="CVV" placeholder="XXX">
+                <div>
+                    <label for="Card Holder">Card's Owner:</label>
+                    <input type="text" id="Card Holder" placeholder="e.g., John Hamilton">
+                </div>
+                </section>
+            </fieldset>
+            <!-- fieldset is used -->
+            <fieldset>
+                <h3>Provide your personal information:</h3>
+                <label for="email">Enter your email: </label>
+                <input type="email" id="email" placeholder="e.g., person@gmail.com">
+                <div>
+                    <label for="name">Enter your full name: </label>
+                    <input type="text" id="name" placeholder="e.g., John Hamilton">
+                </div>
+            </fieldset>
+            <!-- fieldset is used -->
+            <fieldset>
+                <!-- section is used -->
+                <section>
+                    <h3>Conformation:</h3>
+                    <label for="receive">I would like to receive emails about the case regularly</label>
+                    <input type="checkbox" id="receive">
+                    <div>
+                        <label for="terms and conditions">I agree for all the terms and conditions</label>
+                        <input type="checkbox" id="terms and conditions">
+                    </div>
+            </fieldset>
+            </section>
+            <div>
+                <label for="submit">submit</label>
+                <input type="submit" id="submit">
+            </div>
+        </main>
+    </form>
+    <!-- footer used. some quick access to links plus a copy right statment.-->
+    <footer>
+        <hr>
+        <nav>
+            <p><a href="Contact.HTML">Contact me</a> -
+                <a href="Teach.HTML">How to swim</a> -
+                <a href="Essintails.HTML">Prevent drowning</a> -
+                <a href="Donate.HTML">Donate to us</a> -
+                <a href="HomePage.HTML">Home page</a>
+            </p>
+        </nav>
+        <p>all rights reserved. photos used in the website might not be free to use.</p>
+    </footer>
+</body>
+
+</html>
