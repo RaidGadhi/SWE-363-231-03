@@ -1,0 +1,198 @@
+@font-face {
+    font-family: Heebo;
+    src: url(Heebo-VariableFont_wght.ttf);
+}
+nav li {
+    display: inline;
+    margin-right: 20px; /* Adjust the spacing between navigation items as needed */
+}
+
+footer li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Navigation Bar */
+nav ul {
+    color: #000;
+    text-align: right;
+    font-family: Heebo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* H2 Headings */
+h1  {
+    color: var(--Dark-Color, #21243D);
+    font-family: Heebo;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px; /* 136.364% */
+}
+h4 {
+    color: var(--Dark-Color, #21243D);
+font-family: Heebo;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: 60px; /* 272.727% */
+}
+/* Paragraphs */
+p {
+    color: var(--Dark-Color, #21243D);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Buttons */
+/* ... Previous CSS Rules ... */
+
+/* Buttons */
+button {
+    color: var(--Dark-Color, #21243D);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* Add any additional button styles here */
+
+    /* Smooth background color transition on hover */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Add color transition */
+    background-color: transparent; /* Initial background color */
+}
+
+/* Change button background color on hover */
+button:hover {
+    background-color: #3498db; /* Change to the desired background color */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Hamburger Menu */
+.nav-hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: #3498db; /* Hamburger icon color */
+    margin-right: 20px;
+}
+
+/* Hide the navigation by default */
+nav ul {
+    display: none;
+    color: #000;
+    text-align: right;
+    font-family: Heebo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Show the navigation when the "show" class is added */
+nav ul.show {
+    display: block;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Keyframes for slideIn animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ... Previous CSS Rules ... */
+
+/* Loading Screen Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Background color of the loader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+.loader:before {
+    content: "";
+    border: 6px solid #3498db; /* Color of the spinner */
+    border-top: 6px solid transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide the loader after content is loaded */
+body.loaded .loader {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ... Previous CSS Rules ... */
+
+/* Hamburger Menu */
+.nav-hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: #3498db; /* Hamburger icon color */
+    margin-right: 20px;
+}
+
+/* Hide the navigation by default */
+nav ul {
+    display: none;
+    color: #000;
+    text-align: right;
+    font-family: Heebo;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+/* Show the navigation when the "show" class is added */
+nav ul.show {
+    display: block;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Keyframes for slideIn animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ... Previous CSS Rules ... */

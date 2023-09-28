@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raid's Work</title>
+    <meta name="description" content="Raid Gadhi's Work Portfolio">
+    <meta name="keywords" content="Raid Gadhi, Work, Portfolio">
+    <meta name="author" content="Raid Gadhi">
+    <link rel="stylesheet" href="Portstyle.css">
+</head>
+<body>
+    <div class="loader"></div>
+
+    <header>
+        <div class="nav-hamburger">&#9776;</div>
+        <nav>
+            <ul>
+                <li>
+                    <a id="first_nav" href="PortHome.html">Home</a>
+                </li>
+                <li>
+                    <a href="PortBlog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="PortWork.html">Work</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <h2>Work</h2>
+    <section>
+        <img src="work_image_1.jpg" alt="Work Image 1" align="left">
+        <h3>Project A</h3>
+        <p>Year: 2022</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel arcu vel arcu venenatis.</p>
+        <hr>
+    </section>
+    <section>
+        <img src="work_image_2.jpg" alt="Work Image 2" align="left">
+        <h3>Project B</h3>
+        <p>Year: 2021</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel arcu vel arcu venenatis.</p>
+        <hr>
+    </section>
+    <section>
+        <img src="work_image_3.jpg" alt="Work Image 3" align="left">
+        <h3>Project C</h3>
+        <p>Year: 2020</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel arcu vel arcu venenatis.</p>
+        <hr>
+    </section>
+    <section>
+        <img src="work_image_4.jpg" alt="Work Image 4" align="left">
+        <h3>Project D</h3>
+        <p>Year: 2019</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel arcu vel arcu venenatis.</p>
+    </section>
+    <footer>
+        <ul class="social-links">
+            <li>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            </li>
+            <li>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            </li>
+            <li>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            </li>
+            <li>
+                <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            </li>
+        </ul>
+        <p>&copy; 2023 Raid Gadhi</p>
+    </footer>
+    <script>
+        // Wait for the page to fully load
+        window.addEventListener('load', function () {
+            // Add the 'loaded' class to the body after 2 seconds
+            setTimeout(function () {
+                document.body.classList.add('loaded');
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+    </script>
+    <script>
+        const hamburger = document.querySelector('.nav-hamburger');
+        const navList = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+
+        // Wait for the page to fully load
+        window.addEventListener('load', function () {
+            // Add the 'loaded' class to the body after 2 seconds
+            setTimeout(function () {
+                document.body.classList.add('loaded');
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+    </script>
+</body>
+</html>
