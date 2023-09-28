@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملف رائد قاضي الشخصي</title>
+    <meta name="description" content="ملف رائد قاضي الشخصي">
+    <meta name="keywords" content="رائد قاضي ملف رائد، ملف شخصي">
+    <meta name="author" content="رائد قاضي">
+    <link rel="stylesheet" href="Portstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader"></div>
+    <header>
+        <div class="nav-hamburger">&#9776;</div>
+        <nav>
+            <ul>
+                <li>
+                    <a id="first_nav" href="PortHome-ar.html">الرئيسية</a>
+                </li>
+                <li>
+                    <a href="PortBlog-ar.html">المدونة</a>
+                </li>
+                <li>
+                    <a href="PortWork-ar.html">الأعمال</a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <h1>مرحبًا، أنا رائد قاضي عالم الحاسوب</h1> 
+            <figure>
+                <img src="face.png" height="300" width="500" alt="صورة للوجه">
+            </figure>
+        </div>
+        <div>
+            <p>ملتزم بحل المشاكل المعقدة من خلال البرمجة والابتكار. بفضول عميق للتكنولوجيا وقدرة على تحويل الأفكار إلى واقع، أزدهر في عالم تطوير البرمجيات المتطور باستمرار. دعونا نستكشف الحدود الرقمية معًا.</p>
+            <button>تحميل السيرة الذاتية</button>
+        </div>
+    </header>
+    <br>
+    <section>
+        <h4>المقالات الأخيرة</h4>
+        <ul>
+            <li>
+                <a href="#">إنشاء نظام تصميم من الصفر</a>
+            </li>
+            <li>
+                <a href="#">إنشاء أيقونات مثالية بالبيكسل في Figma</a>
+            </li>
+        </ul>
+        <a href="#">عرض الكل</a>
+    </section>
+    <section>
+        <h4>أعمال مميزة</h4>
+        <ul class="featured-works">
+            <li>
+                <img src="sample_image_1.jpg" alt="صورة عينة 1">
+                <h3>تصميم لوحات القيادة</h3>
+                <p>نص تجريبي حول تصميم لوحات القيادة.</p>
+            </li>
+            <li>
+                <img src="sample_image_2.jpg" alt="صورة عينة 2">
+                <h3>تطوير تطبيقات الجوال</h3>
+                <p>نص تجريبي حول تطوير تطبيقات الجوال.</p>
+            </li>
+            <li>
+                <img src="sample_image_3.jpg" alt="صورة عينة 3">
+                <h3>تصميم وتطوير مواقع الويب</h3>
+                <p>نص تجريبي حول تصميم وتطوير مواقع الويب.</p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <ul class="social-links">
+            <li>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            </li>
+            <li>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            </li>
+            <li>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            </li>
+            <li>
+                <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            </li>
+        </ul>
+        <p>&copy; 2023 رائد قاضي</p>
+    </footer>
+    <div class="language-toggle">
+        <a href="PortHome.html">English</a> | <a href="PortHome.html">العربية</a>
+    </div>
+    <script>
+        // Wait for the page to fully load
+        window.addEventListener('load', function () {
+            // Add the 'loaded' class to the body after 2 seconds
+            setTimeout(function () {
+                document.body.classList.add('loaded');
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+    </script>
+    <script>
+        const hamburger = document.querySelector('.nav-hamburger');
+        const navList = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+
+        // Wait for the page to fully load
+        window.addEventListener('load', function () {
+            // Add the 'loaded' class to the body after 2 seconds
+            setTimeout(function () {
+                document.body.classList.add('loaded');
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+    </script>
+</body>
+</html>
