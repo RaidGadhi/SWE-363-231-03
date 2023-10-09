@@ -1,4 +1,5 @@
 # SWE-363-231-03
 This repository is for futre exercises/projects in the course SWE363. 
 
-By mistake, the name for exercise2_css is "Exercise3_css". I tried to rename the folder but I did not know how, I will check with my instructor. But until then, please consider "Exercise3_css" == exercsie2_css and "exercise3_CSS"== correct exercise3_css
+I used to submit files for each exercise. Since this affected the graders, I was instructed to submit it as a single file (similar to projects). 
+Please note that all exercises were submitted in time apart from the ones I did not submit yet. 
