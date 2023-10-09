@@ -1,0 +1,147 @@
+@font-face {
+    font-family: Heebo;
+    src: url(Heebo-VariableFont_wght.ttf);
+}
+
+nav li, footer li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul, h1, h4, p, button {
+    color: var(--Dark-Color, #21243D);
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 60px;
+}
+
+p {
+    font-size: 16px;
+}
+
+button {
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: transparent;
+    color: var(--Dark-Color, #21243D);
+}
+
+button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.nav-hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: #3498db;
+    margin-right: 20px;
+}
+
+nav ul {
+    display: none;
+}
+
+nav ul.show {
+    display: block;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+.loader:before {
+    content: "";
+    border: 6px solid #3498db;
+    border-top: 6px solid transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body.loaded .loader {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/*the following is the new code for exercise 4 css*/
+
+/* Style for the first image */
+/* Style for the first image in the header */
+header img {
+    float: right; /* Align the image to the right */
+    border-radius: 50%; /* Make the border circular */
+    margin-left: 10px; /* Add some margin to separate it from text */
+}
+
+/* Style for the watermark on specific images (add a class to those images) */
+.watermarked-image::before {
+    content: 'RG'; /* Content of the watermark */
+    position: absolute; /* Position the watermark absolutely */
+    top: 5px; /* Adjust the vertical position */
+    right: 5px; /* Adjust the horizontal position */
+    opacity: 0.5; /* Adjust the opacity of the watermark */
+    font-size: 18px; /* Adjust the font size of the watermark */
+    color: rgba(255, 255, 255, 0.7); /* Adjust the color of the watermark text */
+    pointer-events: none; /* Prevent the watermark from being clickable */
+    z-index: 1; /* Ensure the watermark is on top of the image */
+}
+
+/* Style for the date in cards */
+article .date {
+    float: right; /* Align the date to the right */
+    margin-left: 10px; /* Add some margin to separate it from the title */ 
+    font-size: 14px; /* Adjust the font size of the date */
+    color: #777; /* Adjust the color of the date text */
+}
+

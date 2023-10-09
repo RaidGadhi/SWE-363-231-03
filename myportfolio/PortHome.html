@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raid's Portfolio</title>
+    <meta name="description" content="Raid Gadhi Portfolio">
+    <meta name="keywords" content="Raid Gadhi, Raid Portfolio, Gadhi Portfolio">
+    <meta name="author" content="Raid Gadhi">
+    <link rel="stylesheet" href="Portstyle.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-hamburger">&#9776;</div>
+            <ul>
+                <li>
+                    <a id="first_nav" href="PortHome.html">Home</a>
+                </li>
+                <li>
+                    <a href="PortBlog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="PortWork.html">Work</a>
+                </li>
+                <li>
+                    <a href="tic-tac-toe.html">Mini game</a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <h1>Hi, I am Raid Gadhi, Computer Scientist</h1>
+        </div>
+        <div>
+            <figure>
+                <img src="face.jpg" height="200" width="200" alt="photo of a face" class="watermarked-image">
+            </figure>
+            <br>
+            <p>passionate about solving complex problems through code and innovation. With a deep curiosity for technology and a knack for turning ideas into reality, I thrive in the ever-evolving world of software development. Let's explore the digital frontier together.</p>
+            <button>Download Resume</button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Recent Posts</h2>
+            <ul>
+                <li>
+                    <article>
+                        <a href="#">Making Design System from Scratch</a>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <a href="#">Creating Pixel Perfect Icons in Figma</a>
+                    </article>
+                </li>
+            </ul>
+            <a href="#">View All</a>
+        </section>
+
+        <section>
+            <h2>Featured Works</h2>
+            <ul class="featured-works">
+                <li>
+                    <article>
+                        <h3>Designing Dashboards</h3>
+                        <img src="design-icon.png" alt="Sample Image 1" height="100" width="100" class="watermarked-image">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel arcu vel arcu venenatis.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3>Mobile App Development</h3>
+                        <img src="app-development.png" alt="Sample Image 2" height="100" width="100" class="watermarked-image">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel arcu vel arcu venenatis.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3>Web Design and Development</h3>
+                        <img src="computer.png" alt="Sample Image 3" height="100" width="100" class="watermarked-image">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel arcu vel arcu venenatis.</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="social-links">
+            <li>
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            </li>
+            <li>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            </li>
+            <li>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            </li>
+            <li>
+                <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            </li>
+        </ul>
+        <p>&copy; 2023 Raid Gadhi</p>
+    </footer>
+
+    <div class="loader"></div>
+
+    <script>
+        const hamburger = document.querySelector('.nav-hamburger');
+        const navList = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+
+        // Wait for the page to fully load
+        window.addEventListener('load', function () {
+            // Add the 'loaded' class to the body after 2 seconds
+            setTimeout(function () {
+                document.body.classList.add('loaded');
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
+    </script>
+</body>
+</html>
