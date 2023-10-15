@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Interests</title>
+</head>
+<body>
+    <h1>Favorite Fields of Interest</h1>
+    
+    <!-- Container for the dynamic list -->
+    <ul id="interestsList"></ul>
+
+    <!-- Container for favorite fields of interest in computer science -->
+    <h1>Favorite Fields of Interest in Computer Science</h1>
+    <ul id="csInterestsList"></ul>
+
+    <!-- Container for things I am planning to do -->
+    <h1>Things I Am Planning to Do</h1>
+    <ul id="planningList"></ul>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    // Sample data for favorite fields of interest
+const interestsData = [
+    { text: "Philosophy" },
+    { text: "Space and Physics" },
+    { text: "Architecture Engineering" },
+    { text: "Chemistry" },
+    { text: "Neural Networks" }
+];
+
+// Sample data for favorite fields of interest in computer science
+const csInterestsData = [
+    { text: "Cybersecurity" },
+    { text: "Web Development" },
+    { text: "Artificial Intelligence" },
+    { text: "Cloud Computing" },
+    { text: "Computer Architecture" }
+];
+
+// Sample data for things to do
+const planningData = [
+    { text: "Events website for KFUPM students" },
+    { text: "Gaining CCNA networking certificate" },
+    { text: "Understanding core concepts of penetration testing" },
+    { text: "Understanding machine learning to perfection" }
+];
+
+// Function to create and add items to the list
+function createList(data, containerId) {
+    const container = document.getElementById(containerId);
+
+    // Loop through the data and create list items
+    data.forEach(item => {
+        const listItem = document.createElement("li");
+        listItem.textContent = item.text;
+
+        container.appendChild(listItem);
+    });
+}
+
+// Call the createList function for each section
+window.addEventListener("load", () => {
+    createList(interestsData, "interestsList");
+    createList(csInterestsData, "csInterestsList");
+    createList(planningData, "planningList");
+});
+
+</script>
+</html>
