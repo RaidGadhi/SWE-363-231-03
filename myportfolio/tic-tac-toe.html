@@ -32,6 +32,10 @@
             background-color: blanchedalmond;
         }
 
+        .cell:focus {
+            outline: 2px solid blue;
+        }
+
         .row {
             display: flex;
         }
@@ -39,25 +43,27 @@
 </head>
 
 <body>
+    <h2>instructions: </h2>
+    <h4>use the arrow keys to navigate between cells and press the Enter key to make a move. The selected cell will have a blue outline to indicate the current focus. Enjoy your keyboard-controlled tic-tac-toe game!</h4>
     <h1 id="turn">
         Now it's <span>X</span>'s turn
     </h1>
     <!-- Board -->
     <div class="board">
         <div class="row">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div class="cell" tabindex="0"></div>
+            <div class="cell" tabindex="1"></div>
+            <div class="cell" tabindex="2"></div>
         </div>
         <div class="row">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div class="cell" tabindex="3"></div>
+            <div class="cell" tabindex="4"></div>
+            <div class="cell" tabindex="5"></div>
         </div>
         <div class="row">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div class="cell" tabindex="6"></div>
+            <div class="cell" tabindex="7"></div>
+            <div class="cell" tabindex="8"></div>
         </div>
     </div>
     <button id="reset">Reset</button>
@@ -88,6 +94,35 @@
                 cell.style.backgroundColor = "beige";
                 cell.removeEventListener("click", cellClicked);
                 cell.addEventListener("click", cellClicked);
+                cell.addEventListener("keydown", function (event) {
+                    if (event.key === "Enter") {
+                        cellClicked(event);
+                    }
+                    if (event.key === "ArrowLeft") {
+                        const index = Array.from(cells).indexOf(cell);
+                        if (index > 0) {
+                            cells[index - 1].focus();
+                        }
+                    }
+                    if (event.key === "ArrowRight") {
+                        const index = Array.from(cells).indexOf(cell);
+                        if (index < cells.length - 1) {
+                            cells[index + 1].focus();
+                        }
+                    }
+                    if (event.key === "ArrowUp") {
+                        const index = Array.from(cells).indexOf(cell);
+                        if (index - 3 >= 0) {
+                            cells[index - 3].focus();
+                        }
+                    }
+                    if (event.key === "ArrowDown") {
+                        const index = Array.from(cells).indexOf(cell);
+                        if (index + 3 < cells.length) {
+                            cells[index + 3].focus();
+                        }
+                    }
+                });
             });
             turn = "X";
             turnLetter.innerText = turn;
