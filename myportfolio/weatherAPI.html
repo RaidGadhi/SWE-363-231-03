@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <div>
+        <label for="city">Enter city name:</label>
+        <input type="text" id="city" placeholder="City name">
+        <button id="get-weather">Get Weather</button>
+    </div>
+    <div id="weather-info"></div>
+    
+    <script>
+        const apiKey = '086b0aa43ce11ff7c574d1aabdead58a';
+        const weatherEndpoint = 'https://api.openweathermap.org/data/2.5/weather';
+
+        document.getElementById('get-weather').addEventListener('click', () => {
+            const city = document.getElementById('city').value;
+            if (city) {
+                fetch(`${weatherEndpoint}?q=${city}&appid=${apiKey}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Network response was not ok (${response.status})`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const weatherInfo = `
+                            <h2>Weather in ${data.name}, ${data.sys.country}</h2>
+                            <p>Temperature: ${data.main.temp}°C</p>
+                            <p>Weather: ${data.weather[0].description}</p>
+                        `;
+                        document.getElementById('weather-info').innerHTML = weatherInfo;
+                    })
+                    .catch(error => console.error('API request failed', error));
+            } else {
+                console.error('City name is required.');
+            }
+        });
+    </script>
+</body>
+</html>
