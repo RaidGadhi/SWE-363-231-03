@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Example</title>
+    <style>
+        .object {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="object" id="article">
+        <h2>Article</h2>
+    </div>
+    <div class="object" id="product">
+        <h2>Product</h2>
+    </div>
+    <div class="object" id="lesson">
+        <h2>Lesson</h2>
+    </div>
+    <div class="object" id="resource">
+        <h2>Resource</h2>
+    </div>
+
+    <script>
+        // Step 1: Objects and Classes
+        class WebsiteObject {
+            constructor(type) {
+                this.type = type;
+            }
+
+            display() {
+                console.log(`This is a ${this.type}.`);
+                const element = document.getElementById(this.type.toLowerCase());
+                if (element) {
+                    element.textContent = `This is a ${this.type}.`;
+                }
+            }
+        }
+
+        const article = new WebsiteObject("Article");
+        const product = new WebsiteObject("Product");
+        const lesson = new WebsiteObject("Lesson");
+        const resource = new WebsiteObject("Resource");
+
+        article.display();
+        product.display();
+        lesson.display();
+        resource.display();
+
+        // Step 2: Functions
+        const displayMessage = (message) => {
+            console.log(message);
+        };
+
+        const operateOnObject = (object) => {
+            const message = `Operating on a ${object.type}.`;
+            displayMessage(message);
+        };
+
+        article.display = () => {
+            operateOnObject(article);
+        };
+
+        product.display = () => {
+            operateOnObject(product);
+        };
+
+        lesson.display = () => {
+            operateOnObject(lesson);
+        };
+
+        resource.display = () => {
+            operateOnObject(resource);
+        };
+
+        // Step 3: Array Functions
+        const objects = [article, product, lesson, resource];
+
+        const objectTypes = objects.map((object) => object.type);
+        console.log(objectTypes);
+
+        const totalObjects = objects.reduce((total, object) => total + 1, 0);
+        console.log(`Total objects: ${totalObjects}`);
+
+        const filteredObjects = objects.filter((object) => object.type !== "Product");
+        console.log(filteredObjects);
+    </script>
+</body>
+</html>
